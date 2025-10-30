@@ -12,12 +12,12 @@ last few years.
 
 ---
 
-<img align="right" width="250" src="https://raw.githubusercontent.com/Soft/xcolor/master/extra/screenshot.png">
+<img align="right" width="250" src="https://raw.githubusercontent.com/bakkeby/xcolor/master/extra/screenshot.png">
 
 Lightweight color picker for X11. Use mouse to select colors visible anywhere on
 the screen to get their RGB representation.
 
-## Installation
+### Installation
 
 ### Using Cargo
 
@@ -58,21 +58,22 @@ printed to the standard output.
 You can cancel the color picker by clicking right click or hitting the escape key.
 
 ``` text
-xcolor 0.5.0
+xcolor 0.5.1
 Samuel Laurén <samuel.lauren@iki.fi>:Callum Osmotherly <acheronfail@gmail.com>
 Lightweight color picker for X11
 
 USAGE:
-    xcolor [OPTIONS]
+    xcolor [FLAGS] [OPTIONS]
 
 FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
+    -h, --help        Prints help information
+    -p, --position    Makes xcolor also print out the position of the pointer
+    -V, --version     Prints version information
 
 OPTIONS:
     -c, --custom <FORMAT>                Custom output format
-    -f, --format <NAME>                  Output format (defaults to hex) [possible values: hex, HEX, hex!, HEX!, plain,
-                                         rgb]
+    -f, --format <NAME>                  Output format (defaults to hex) [possible values: hex, HEX,
+                                         hex!, HEX!, plain, rgb]
     -P, --preview-size <PREVIEW_SIZE>    Size of preview, must be odd (defaults to 255)
     -S, --scale <SCALE>                  Scale of magnification (defaults to 8)
     -s, --selection <SELECTION>          Output to selection (defaults to clipboard) [possible values: primary,
