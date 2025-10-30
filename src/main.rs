@@ -58,6 +58,7 @@ fn run(args: &ArgMatches) -> Result<()> {
     });
     let use_selection = selection.is_some();
     let background = std::env::var("XCOLOR_FOREGROUND").is_err();
+    let print_position = args.is_present("position");
 
     let mut in_parent = true;
 
@@ -86,6 +87,10 @@ fn run(args: &ArgMatches) -> Result<()> {
                     set_selection(&conn, root, &selection.unwrap(), &output)?;
                 }
             } else {
+                if print_position {
+                    let pos = xcb::xproto::query_pointer(&conn, root).get_reply()?;
+                    println!("position: ({}, {})", pos.root_x(), pos.root_y());
+                }
                 println!("{}", output);
             }
         }

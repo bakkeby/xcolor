@@ -29,7 +29,7 @@ To get the latest development version of `xcolor`, you can direct cargo to
 install from the git repository:
 
 ``` shell
-cargo install --git 'https://github.com/Soft/xcolor.git'
+cargo install --git 'https://github.com/bakkeby/xcolor.git'
 ```
 
 Installing `xcolor` with cargo will not install its manual page or desktop file.
@@ -39,7 +39,7 @@ directory. By default, the install script will place the files under
 
 ### Arch Linux
 
-`xcolor` is available in the Arch Linux [community repository](https://archlinux.org/packages/community/x86_64/xcolor/). To install it with [pacman](https://wiki.archlinux.org/title/Pacman):
+The upstream `xcolor` is available in the Arch Linux [community repository](https://archlinux.org/packages/community/x86_64/xcolor/). To install it with [pacman](https://wiki.archlinux.org/title/Pacman):
 
 ``` shell
 pacman -S xcolor
@@ -49,6 +49,7 @@ pacman -S xcolor
 
 Simply invoke the `xcolor` command to select a color. The selected color will be
 printed to the standard output.
+You can cancel the color picker by clicking right click or hitting the escape key.
 
 ``` text
 xcolor 0.5.0
@@ -91,6 +92,10 @@ default it is set to `8` which indicates an 8x zoom level.
 The `-P` or `--preview-size` flag controls the size of the preview in pixels. So
 that the preview always has a center pixel this number must be odd, if an even
 number is passed then it will be changed to the next odd number.
+
+## Position
+
+The `-p` or `--position` flag allows to also print out the position of the cursor.
 
 ## Formatting
 
@@ -153,4 +158,4 @@ and padded with zeroes to be sixteen characters long.
 
 ## Issues
 
-Bugs & Issues should be reported at [GitHub](https://github.com/Soft/xcolor/issues).
+Bugs & Issues should be reported at upstream [GitHub](https://github.com/Soft/xcolor/issues).
