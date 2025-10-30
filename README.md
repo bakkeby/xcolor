@@ -1,10 +1,16 @@
 # xcolor 🌈
 
-[![Build Status](https://api.travis-ci.org/Soft/xcolor.svg?branch=master)](https://travis-ci.org/Soft/xcolor)
-[![Latest Version](https://img.shields.io/crates/v/xcolor.svg)](https://crates.io/crates/xcolor)
-[![GitHub release](https://img.shields.io/github/release/Soft/xcolor.svg)](https://github.com/Soft/xcolor/releases)
-[![dependency status](https://deps.rs/repo/github/soft/xcolor/status.svg)](https://deps.rs/repo/github/soft/xcolor)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Note that this is a fork of the original [xcolor](https://github.com/Soft/xcolor) tool by Soft.
+
+The aim of this is to integrate some of the pull requests to add some desired features such as:
+   - right click to quit
+   - press escape key to quit
+   - show color hex value below magnifying glass
+
+The reason for forking is that the project appears to have not been actively maintained over the
+last few years.
+
+---
 
 <img align="right" width="250" src="https://raw.githubusercontent.com/Soft/xcolor/master/extra/screenshot.png">
 
