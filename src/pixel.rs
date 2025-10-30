@@ -18,6 +18,10 @@ impl<T> PixelSquare<T> {
     pub fn width(&self) -> usize {
         self.width
     }
+
+    pub fn height(&self) -> usize {
+        self.width
+    }
 }
 
 impl<T> PixelSquare<&mut [T]> {
@@ -43,12 +47,12 @@ impl<T, U: DerefMut<Target=[T]>> IndexMut<usize> for PixelSquare<U> {
 impl<T, U: Deref<Target=[T]>> Index<Point> for PixelSquare<U> {
     type Output = T;
     fn index(&self, (x, y): Point) -> &Self::Output {
-        &self.pixels[x * self.width + y]
+        &self.pixels[y * self.width + x]
     }
 }
 
 impl<T, U: DerefMut<Target=[T]>> IndexMut<Point> for PixelSquare<U> {
     fn index_mut(&mut self, (x, y): Point) -> &mut Self::Output {
-        &mut self.pixels[x * self.width + y]
+        &mut self.pixels[y * self.width + x]
     }
 }

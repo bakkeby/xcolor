@@ -58,7 +58,6 @@ pub fn get_cli() -> App<'static, 'static> {
                 .long("position")
                 .required(false)
                 .takes_value(false)
-                // .value_name("POSITION")
-                .help("Should xcolor also print out the position of the pointer"),
+                .help("Makes xcolor also print out the position of the pointer"),
         )
 }
