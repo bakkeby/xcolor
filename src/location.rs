@@ -71,7 +71,7 @@ fn create_new_xcursor(
     preview_width: u32,
 ) -> Result<u32> {
     Ok(unsafe {
-        let mut cursor_image = XcursorImageCreate(preview_width as i32, preview_width as i32);
+        let cursor_image = XcursorImageCreate(preview_width as i32, preview_width as i32);
 
         // set the "hot spot" - this is where the pointer actually is inside the image
         (*cursor_image).xhot = preview_width / 2;
